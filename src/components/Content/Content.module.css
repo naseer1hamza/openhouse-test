@@ -1,0 +1,45 @@
+table{
+    width: 100%; 
+    border-collapse: collapse; 
+    border: 1px solid black;
+}
+tr {
+    border: 1px solid black;
+}
+th, td {
+    padding: 6px;  
+    width: 500px; 
+    height: auto;
+}
+
+img {
+    width: 500px; 
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    table { 
+        border-collapse: collapse; 
+    }
+    tr {
+        border-bottom: 1px solid black;
+    }
+    table th{
+        display: none;
+    }
+    table td {
+      display: flex;
+    }
+    img {
+        width: 300px; 
+        height: auto;
+    }
+
+    table td::before {
+      content: attr(label);
+      font-weight: bold;
+      padding: 5px;
+      width: auto;
+      min-width: 120px;
+    }
+  }
